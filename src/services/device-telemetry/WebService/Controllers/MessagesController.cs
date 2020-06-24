@@ -100,7 +100,8 @@ namespace Mmm.Iot.DeviceTelemetry.WebService.Controllers
 
             if (limit == null)
             {
-                limit = this.config.DeviceTelemetryService.Messages.MessageRetrievalCountLimit;
+                // limit = this.config.DeviceTelemetryService.Messages.MessageRetrievalCountLimit;
+                limit = 10000;
             }
 
             // TODO: move this logic to the storage engine, depending on the

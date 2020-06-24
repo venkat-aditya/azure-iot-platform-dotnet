@@ -356,6 +356,7 @@ namespace Mmm.Iot.Common.Services.External.CosmosDb
                     new List<Document>() :
                     result
                         .AsEnumerable()
+                        .Where((_, idx) => idx % 10 == 0)
                         .Skip(skip)
                         .Take(limit)
                         .ToList();
